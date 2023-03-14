@@ -15,16 +15,13 @@ const Metrics = () => {
     useEffect(() => {
         if (mount) {
             // call function on mount then every 30 seconds
-
             getMetrics()
-
             setInterval(() => {
                 getMetrics()
             }, 30000)
         }
     }, [mount])
 
-    console.log('getMetrics')
     const getMetrics = async () => {
         try {
             setLoading(true)
@@ -34,7 +31,6 @@ const Metrics = () => {
                 },
             })
 
-            console.log(response)
             setMetrics(response.data)
             setTimeout(() => {
                 setLoading(false)
@@ -43,10 +39,6 @@ const Metrics = () => {
             console.log(error)
         }
     }
-
-    useEffect(() => {
-        console.log(loading)
-    }, [loading])
 
     return (
         <div className="metrics">

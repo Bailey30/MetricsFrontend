@@ -16,7 +16,7 @@
 
 .metrics {
     text-align: center;
-    max-width: 50%;
+    width: 50%;
 }
 
 pre {
@@ -30,4 +30,5 @@ pre {
     align-items: center;
     justify-content: center;
     height: 100%;
+    width: 100%;
 }
